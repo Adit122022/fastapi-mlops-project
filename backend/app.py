@@ -15,7 +15,9 @@ app = FastAPI(title="FastAPI MLOps Service")
 # Setup CORS middleware so your HTML file can communicate with the API
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Restrict this in production
+    allow_origins=[
+    "https://adit122022.github.io",
+    "http://127.0.0.1:5500"],  # Restrict this in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
