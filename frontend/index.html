@@ -20,7 +20,7 @@
 
         * {
             box-sizing: border-box;
-        } 
+        }
 
         body {
             min-height: 100vh;
@@ -402,7 +402,7 @@
             const payload = { avg_income: document.getElementById('avg_income').value, house_age: document.getElementById('house_age').value, num_rooms: document.getElementById('num_rooms').value };
             try {
                 // "backend" maps directly to the container service network name inside Docker
-                const response = await fetch('http://localhost:5000/predict', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+                const response = await fetch('http://13.60.201.94:5000/predict', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
                 const data = await response.json();
                 if (data.status === 'success') {
                     resultDiv.className = "result success";
